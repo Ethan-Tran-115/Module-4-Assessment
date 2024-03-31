@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>Welcome to Gas Usage Calculator</h1>
-	<p><a href="form1.jsp">Form 1: Calculate Daily Gas Usage</a></p>
-    <p><a href="form2.jsp">Form 2: Calculate Monthly Gas Payment</a>
+	<p><a href="dailyGasUsageForm.jsp">Calculate Daily Gas Usage</a></p>
+    <p><a href="monthlyGasPaymentForm.jsp">Calculate Monthly Gas Payment</a>
 </body>
 </html>

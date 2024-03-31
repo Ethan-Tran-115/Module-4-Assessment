@@ -12,14 +12,14 @@ import model.GasCalculate;
 /**
  * Servlet implementation class Form1Servlet
  */
-@WebServlet("/Form1Servlet")
-public class Form1Servlet extends HttpServlet {
+@WebServlet("/dailyGasUsageServlet")
+public class DailyGasUsageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Form1Servlet() {
+    public DailyGasUsageServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -46,10 +46,10 @@ public class Form1Servlet extends HttpServlet {
     	    request.setAttribute("gasCalculator", gasCalculate);
 
     	    // Forward to result1
-    	    getServletContext().getRequestDispatcher("/result1.jsp").forward(request, response);
+    	    getServletContext().getRequestDispatcher("/dailyGasUsageResult.jsp").forward(request, response);
     	} catch (NumberFormatException e) {
     	    request.setAttribute("error", "Invalid input. Please enter numeric values.");
-    	    getServletContext().getRequestDispatcher("/form1.jsp").forward(request, response);
+    	    getServletContext().getRequestDispatcher("/dailyGasUsageForm.jsp").forward(request, response);
     	}
     }
 }

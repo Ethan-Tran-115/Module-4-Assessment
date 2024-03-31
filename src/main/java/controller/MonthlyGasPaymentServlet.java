@@ -12,14 +12,14 @@ import model.GasCalculate;
 /**
  * Servlet implementation class Form2Servlet
  */
-@WebServlet("/Form2Servlet")
-public class Form2Servlet extends HttpServlet {
+@WebServlet("/monthlyGasPaymentServlet")
+public class MonthlyGasPaymentServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Form2Servlet() {
+    public MonthlyGasPaymentServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -49,14 +49,14 @@ public class Form2Servlet extends HttpServlet {
     	    request.setAttribute("gasCalculatorResult2", gasCalculateResult2);
 
     	    // Forward to result2
-    	    getServletContext().getRequestDispatcher("/result2.jsp").forward(request, response);
+    	    getServletContext().getRequestDispatcher("/monthlyGasPaymentResult.jsp").forward(request, response);
     	    return; 
     	} catch (NumberFormatException e) {
     	    request.setAttribute("error", "Invalid input. Please enter numeric values.");
-    	    getServletContext().getRequestDispatcher("/form2.jsp").forward(request, response);
+    	    getServletContext().getRequestDispatcher("/monthlyGasPaymentForm.jsp").forward(request, response);
     	}
 
     	request.setAttribute("error", "An unexpected error occurred. Please try again.");
-    	getServletContext().getRequestDispatcher("/form2.jsp").forward(request, response);
+    	getServletContext().getRequestDispatcher("/monthlyGasPaymentForm.jsp").forward(request, response);
     }
 }

@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Result 2</title>
+<title>Monthly Gas Payment Result</title>
 </head>
 <body>
-	<h1>Result 2</h1>
+	<h1>Monthly Gas Payment</h1>
     <p>Monthly gas payment: $${String.format("%.2f", gasCalculatorResult2.monthlyGasPayment)}</p>
     <p><a href="index.jsp">Back to Home</a></p>
 </body>
